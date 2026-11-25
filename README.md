@@ -14,7 +14,7 @@ install.sh  links everything into place
 
 ```sh
 # requirements
-brew install neovim tmux
+brew install neovim tmux trash  # trash: lets the file tree's `d` move files to the macOS Trash
 brew install --cask iterm2 font-jetbrains-mono-nerd-font
 npm install -g tree-sitter-cli   # builds syntax parsers (Homebrew's version compiles Rust from source)
 xcode-select --install           # clang + clangd for C++ IntelliSense
@@ -51,6 +51,7 @@ files in `~/dotfiles` changes your live config. Anything already in those spots 
 |---|---|
 | `Ctrl-n` | toggle file tree |
 | `\e` | reveal current file in tree |
+| `a` / `r` / `d` (in tree) | new file / rename / move to Trash (`D` deletes permanently) |
 | `Shift-h` / `Shift-l` | previous / next tab |
 | `\1`…`\5` | jump to tab |
 | `\x` | close tab |
