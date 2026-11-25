@@ -36,3 +36,14 @@ vim.api.nvim_create_autocmd("FileType", {
         end
     end,
 })
+
+-- Command-line window (Ctrl-f while typing a : command, or q: from normal mode):
+-- edit commands with normal vim motions, Enter runs the line under the cursor.
+vim.opt.cmdwinheight = 12
+vim.api.nvim_create_autocmd("CmdwinEnter", {
+    callback = function(args)
+        vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = args.buf, desc = "Close command-line window" })
+        vim.opt_local.number = false
+        vim.opt_local.relativenumber = false
+    end,
+})
