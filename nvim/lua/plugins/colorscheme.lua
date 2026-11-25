@@ -11,6 +11,8 @@ return {
             treesitter = true,
             native_lsp = { enabled = true },
             blink_cmp = true,
+            gitsigns = true,
+            diffview = true,
         },
     },
     config = function(_, opts)

@@ -40,6 +40,8 @@ files in `~/dotfiles` changes your live config. Anything already in those spots 
 | [blink.cmp](https://github.com/saghen/blink.cmp) | autocomplete popup |
 | [catppuccin](https://github.com/catppuccin/nvim) | color scheme |
 | [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) | `Ctrl-h/j/k/l` across nvim splits and tmux panes |
+| [gitsigns](https://github.com/lewis6991/gitsigns.nvim) | git change markers, stage/undo changes, blame |
+| [diffview](https://github.com/sindrets/diffview.nvim) | side-by-side diffs and file history |
 | [claudecode.nvim](https://github.com/coder/claudecode.nvim) | Claude Code integration |
 
 ### Keys (leader is `\`)
@@ -60,6 +62,12 @@ files in `~/dotfiles` changes your live config. Anything already in those spots 
 | `\d` / `]d` / `[d` | show error / next / previous |
 | `\h` | switch `.cpp` ↔ `.hpp` |
 | `gf` | open file under cursor (works on `<iostream>` too) |
+| `]c` / `[c` | next / previous git change |
+| `\gp` | preview change |
+| `\gs` / `\gr` | stage / undo change |
+| `\gb` / `\gB` | blame line / toggle inline blame |
+| `\gd` / `\gq` | open / close diff of all changes |
+| `\gh` / `\gH` | history of this file / repo |
 | `\ac` | toggle Claude Code |
 
 C++ projects without a `compile_commands.json` can add a `.clangd` file:
