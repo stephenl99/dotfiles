@@ -42,6 +42,7 @@ files in `~/dotfiles` changes your live config. Anything already in those spots 
 | [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) | `Ctrl-h/j/k/l` across nvim splits and tmux panes |
 | [gitsigns](https://github.com/lewis6991/gitsigns.nvim) | git change markers, stage/undo changes, blame |
 | [diffview](https://github.com/sindrets/diffview.nvim) | side-by-side diffs and file history |
+| [satellite](https://github.com/lewis6991/satellite.nvim) | scrollbar showing git changes, errors and search matches |
 | [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim) | formatted markdown inside nvim |
 | [claudecode.nvim](https://github.com/coder/claudecode.nvim) | Claude Code integration |
 
