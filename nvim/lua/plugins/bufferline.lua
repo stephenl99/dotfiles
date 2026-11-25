@@ -7,6 +7,16 @@ return {
         "folke/snacks.nvim", -- for closing a file without wrecking the window layout
     },
     event = "VeryLazy",
+    init = function()
+        -- :BufDel closes the current file but keeps the window (and the tab bar/tree layout)
+        vim.api.nvim_create_user_command("BufDel", function(cmd)
+            require("snacks").bufdelete({ force = cmd.bang })
+        end, { bang = true, desc = "Close file, keep window layout" })
+        -- typing :bd (or :bd!) runs :BufDel instead; :bd with arguments still works as usual
+        vim.keymap.set("ca", "bd", function()
+            return (vim.fn.getcmdtype() == ":" and vim.fn.getcmdline() == "bd") and "BufDel" or "bd"
+        end, { expr = true })
+    end,
     keys = {
         { "<S-h>", "<cmd>BufferLineCyclePrev<cr>", desc = "Previous tab" },
         { "<S-l>", "<cmd>BufferLineCycleNext<cr>", desc = "Next tab" },
