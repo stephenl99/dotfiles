@@ -13,6 +13,7 @@ return {
             blink_cmp = true,
             gitsigns = true,
             diffview = true,
+            render_markdown = true,
         },
     },
     config = function(_, opts)
